@@ -31,7 +31,7 @@ const userCtrl = {
                 httpOnly:true,
                 path:'/user/refresh_token',
                 secure: true,       // Use true if on HTTPS
-    sameSite: 'none', 
+    sameSite: 'None', 
             })
 
             res.json({accesstoken})
@@ -84,7 +84,8 @@ return res.status(500).json({msg:err.message})
             res.cookie('refreshtoken',refreshtoken,{
                 httpOnly:true,
                 path:'/user/refresh_token',
-       
+                secure: true, // Ensure this is true for HTTPS
+                sameSite: 'None'
             })
 
             res.json({accesstoken})
