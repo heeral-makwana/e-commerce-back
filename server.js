@@ -7,10 +7,7 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(cors({
-    origin: 'https://heeral-makwana.github.io/', // Replace with your deployed frontend URL
-    credentials: true,                     
-}));
+app.use(cors());
 app.use(express.json())             
 app.use(cookieParser())
 app.use(fileUpload({
